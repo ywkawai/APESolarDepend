@@ -1,0 +1,39 @@
+#+TITLE: 水惑星の気候の太陽定数増減実験
+#+AUuTOHR: 河合 佑太
+#+LANGUAGE: ja
+#+HTML_MATHJAX: align:"left" mathml:t path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></SCRIPT>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./org.css" />
+
+* 概要
+
+* モデルの記述
+  - [[../Dthesis/dthesis_ja_main.pdf][D 論]] の第??章と付録を参照(リンク)
+
+* 実験ケース
+ - hogehoge
+
+* 計算結果
+** 水惑星の気候の太陽定数依存性
+  - [[./swamp/APESolarDepSWPO.html][Swamp ocean 実験]]
+  - [[./slab/APESolarDepSLBO.html][Slab ocean 実験]]
+  - Dynamic ocean 実験
+    - 現在地球に近い海洋塩分の大きさの場合
+    - 現在地球より海洋塩分の大きさがずっと小さい(真水)場合
+    - 現在地球より海洋塩分の大きさがずっと大きい場合
+
+** swamp, slab, dynamic ocean 実験の結果比較
+
+* まとめ
+  - hogehoge　
+
+* 補足
+  - [[./swamp_INTH07OriConf/APESolarDepSWPO_INTH07OriConf.html][INTH07 の結果を忠実に再現するコードでの swamp ocean 実験の結果]]
+  - [[./swamp_MCABugFixImpact/APESolarDepSWPO_MCABugFixImpact.html][INTH07 の湿潤対流調節コードのバグの影響]]
+
+* 関連リンク
+  - 参考文献リスト
+  - dcmodel 群
+    - [[https://www.gfd-dennou.org/arch/dcpam/][惑星大気大循環モデル: DCPAM]]
+    - [[https://github.com/gfd-dennou-club/Dennou-OGCM][海洋大循環モデル・海氷熱力学モデル: Dennou-OGCM]]
+    - [[https://github.com/gfd-dennou-club/Dennou-CCM][大気海氷結合モデル: Dennou-CCM]]
+  - [[http://www.gfd-dennou.org/arch/ykawai/work/Dennou-OGCM/model/sogcm/misc/][Kawai work 関連資料]]

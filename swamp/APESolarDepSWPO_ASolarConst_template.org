@@ -1,0 +1,42 @@
+#+NAME: create_FigsTable
+#+BEGIN_SRC ruby ::results value raw :exports none :var caption="ほほげほげ" :var figPicsPath="hoge{1,2}.png" :var dirPath="./expdata_inhomoFluid/common/" :var figName="hoge"
+    require 'pathname'
+
+    str =  "#+CAPTION: #{caption}.\n" 
+    str << "#+NAME: fig:#{figName} \n" << "|"
+
+    figPicPathStrs = Dir.glob("#{dirPath}#{figPicsPath}")
+    
+
+    figPicPathStrs.each{|figPath|
+      figPath_ = figPath.gsub("_anim.mp4", "_snapshot.png")
+      figThumbPath = Pathname(figPath_).sub(/\.[^.]+$/,  "_thumb.png")
+      str << "[[file:#{figPath}][file:#{figThumbPath}]] |" 
+    }
+    str << "\n"
+    return str
+#+END_SRC
+
+
+[[../index.html][<水惑星の気候の太陽定数増減実験の Top  ページへ戻る>]]
+
+[[./APESolarDepSWPO.html][<swamp ocean 実験の Top ページへ戻る>]]
+
+
+* 統計的平衡状態
+
+- 時間平均・東西平均場
+  #+CALL: create_FigsTable("東西風・温度場(左), 質量流線関数・比湿(右)", "#__SolarConstTag__#_{U-T,MSF-QH2OVap}_xtmean_itr1.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
+  
+- 時間平均・東西平均場(鉛直 log 座標)
+
+  #+CALL: create_FigsTable("東西風・温度場(左), 質量流線関数・比湿(右)", "#__SolarConstTag__#_{U-T,MSF-QH2OVap}_xtmean_itr2.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
+
+- 熱フラックス
+
+  #+CALL: create_FigsTable("熱フラックス", "#__SolarConstTag__#_EnergyFlux_xtmean.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
+
+- 場の時間発展の様子(動画)
+
+  #+CALL: create_FigsTable("降水分布(左)", "#__SolarConstTag__#_PRCP_anim.mp4", "./#__SolarConstTag__#/anim/") :results value raw :exports results
+  

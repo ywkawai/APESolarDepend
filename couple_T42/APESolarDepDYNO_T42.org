@@ -1,0 +1,57 @@
+#+TITLE: Dynamic ocean 実験(AGCM の水平解像度 T42)の結果
+#+AUTOHR: 河合 佑太
+#+LANGUAGE: ja
+#+HTML_MATHJAX: align:"left" mathml:t path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></SCRIPT>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./../org.css" />
+
+#+NAME: create_FigsTable
+#+BEGIN_SRC ruby ::results value raw :exports none :var caption="ほほげほげ" :var figPicsPath="hoge{1,2}.png" :var dirPath="./expdata_inhomoFluid/common/" :var figName="hoge"
+    require 'pathname'
+
+    str =  "#+CAPTION: #{caption}.\n" 
+    str << "#+NAME: fig:#{figName} \n" << "|"
+
+    figPicPathStrs = Dir.glob("#{dirPath}#{figPicsPath}")
+    
+
+    figPicPathStrs.each{|figPath|
+      figThumbPath = Pathname(figPath).sub(/\.[^.]+$/,  "_thumb.png")
+      str << "[[file:#{figPath}][file:#{figThumbPath}]] |" 
+    }
+    str << "\n"
+    return str
+#+END_SRC
+
+
+[[../index.html][<水惑星の気候の太陽定数増減実験の Top ページへ戻る>]]
+
+* 気候レジーム図
+
+- 太陽定数に対する氷線緯度依存性
+| [[file:./regime_diagram/regime_diagram_icelat.png][file:./regime_diagram/regime_diagram_icelat.png]] |
+
+
+- 太陽定数に対する全球平均温度依存性
+| [[file:./regime_diagram/regime_diagram_gmtemp.png][file:./regime_diagram/regime_diagram_gmtemp.png]] |
+
+
+* 各太陽定数に対する大気場(初期条件が 280 K 等温大気の場合)
+- 詳細(準備中)
+   -  [[./APESolarDepDYNO_S1000_from_ini280K.html][S1000]], [[./APESolarDepDYNO_S1100_from_ini280K.html][S1100]], [[./APESolarDepDYNO_S1150_from_ini280K.html][S1150]], [[./APESolarDepDYNO_S1200_from_ini280K.html][S1200]], [[./APESolarDepDYNO_S1300_from_ini280K.html][S1300]], [[./APESolarDepDYNO_S1380_from_ini280K.html][S1380]], [[./APESolarDepDYNO_S1450_from_ini280K.html][S1450]], [[./APESolarDepDYNO_S1500L32Mod_from_ini280K.html][S1500]]
+
+- 概要
+   - S=1100 W/m^2 (全球凍結状態)
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1100_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1100/mean_state/") :results value raw :exports results
+   - S=1200 W/m^2 (部分凍結状態)
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1200_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1200/mean_state/") :results value raw :exports results
+   - S=1300 W/m^2 (部分凍結状態)
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1300_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1300/mean_state/") :results value raw :exports results
+   - S=1380 W/m^2 (部分凍結状態)
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1380_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1380/mean_state/") :results value raw :exports results
+   - S=1450 W/m^2 (部分凍結状態)
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1450_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1450/mean_state/") :results value raw :exports results
+   - S=1500 W/m^2 (部分凍結状態)
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1500L32Mod_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1500L32Mod/mean_state/") :results value raw :exports results
+   - S=1600 W/m^2 (暴走温室状態)
+     - 準備中
+

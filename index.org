@@ -6,6 +6,7 @@
 
 * 概要
 
+
 * モデルの記述
   - [[../Dthesis/dthesis_ja_main.pdf][D 論]] の第??章と付録を参照(リンク)
 
@@ -14,13 +15,20 @@
 
 * 計算結果
 ** 水惑星の気候の太陽定数依存性
-  - [[./swamp/APESolarDepSWPO.html][Swamp ocean 実験]]
-  - [[./slab/APESolarDepSLBO.html][Slab ocean 実験]]
-  - Dynamic ocean 実験
-    - 現在地球に近い海洋塩分の大きさの場合
-    - 現在地球より海洋塩分の大きさがずっと小さい(真水)場合
-    - 現在地球より海洋塩分の大きさがずっと大きい場合
+  - Swamp ocean 実験
+    - [[./swamp/APESolarDepSWPO.html][AGCM-T21]]
+    - [[./swamp_T42/APESolarDepSWPO_T42.html][AGCM-T42]]
+  - Slab ocean 実験
+    - [[./slab/APESolarDepSLBO.html][AGCM-T21]]
+    - AGCM-T42
 
+  - Dynamic ocean 実験 (現在地球と海洋塩分量が同程度の場合)
+    - [[./couple/APESolarDepDYNO.html][AGCM-T21]]
+    - [[./couple_T42/APESolarDepDYNO_T42.html][AGCM-T42]]
+  - Dynamic ocean 実験 (現在地球より海洋塩分量がずっと小さい場合)
+  - Dynamic ocean 実験 (現在地球より海洋塩分量がずっと大きい場合)
+
+* 考察
 ** swamp, slab, dynamic ocean 実験の結果比較
 
 * まとめ
@@ -32,6 +40,7 @@
 
 * 関連リンク
   - 参考文献リスト
+  - [[./misc/experiment_progress.html][水惑星の気候の太陽定数増減実験の計算進捗リスト]]
   - dcmodel 群
     - [[https://www.gfd-dennou.org/arch/dcpam/][惑星大気大循環モデル: DCPAM]]
     - [[https://github.com/gfd-dennou-club/Dennou-OGCM][海洋大循環モデル・海氷熱力学モデル: Dennou-OGCM]]

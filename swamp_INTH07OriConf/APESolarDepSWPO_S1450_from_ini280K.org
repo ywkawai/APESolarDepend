@@ -1,0 +1,7 @@
+#+TITLE: Swamp ocean 実験の結果 (S=1450 W/m^2, 初期 280 K 等温大気, INTH07 を再現するコードを用いた場合)
+#+AUTOHR: 河合 佑太
+#+LANGUAGE: ja
+#+HTML_MATHJAX: align:"left" mathml:t path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></SCRIPT>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./../org.css" />
+
+#+INCLUDE: "APESolarDepSWPO_S1450_from_ini280K_sub.org"

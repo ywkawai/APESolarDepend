@@ -20,7 +20,7 @@
 
 [[../index.html][<水惑星の気候の太陽定数増減実験の Top  ページへ戻る>]]
 
-[[./APESolarDepSWPO.html][<swamp ocean 実験の Top ページへ戻る>]]
+[[./APESolarDepSWPO_T42.html][<swamp ocean 実験(T42 計算)の Top ページへ戻る>]]
 
 
 * 時系列

@@ -1,10 +1,11 @@
 #!/usr/env/ruby
 
 exp_hash = [
-  {"exp_tag"=>"S900_from_ini280K", "dir"=>"S900"}, 
+#  {"exp_tag"=>"S900_from_ini280K", "dir"=>"S900"}, 
   {"exp_tag"=>"S1000_from_ini280K", "dir"=>"S1000"}, 
   {"exp_tag"=>"S1100_from_ini280K", "dir"=>"S1100"}, 
   {"exp_tag"=>"S1200_from_ini280K", "dir"=>"S1200"}, 
+  {"exp_tag"=>"S1250_from_ini280K", "dir"=>"S1250"},
   {"exp_tag"=>"S1300_from_ini280K", "dir"=>"S1300"}, 
   {"exp_tag"=>"S1380_from_ini280K", "dir"=>"S1380"}, 
   {"exp_tag"=>"S1450_from_ini280K", "dir"=>"S1450"},

@@ -30,26 +30,26 @@
 - 太陽定数に対する氷線緯度依存性
 | [[file:./regime_diagram/regime_diagram_icelat.png][file:./regime_diagram/regime_diagram_icelat.png]] |
 
+   注) T42 計算の結果は濃色のマークで, T21 計算の結果は薄色の小さなマークで表している. 
 
 - 太陽定数に対する全球平均温度依存性
 | [[file:./regime_diagram/regime_diagram_gmtemp.png][file:./regime_diagram/regime_diagram_gmtemp.png]] |
 
+   注) T42 計算の結果は濃色のマークで, T21 計算の結果は薄色の小さなマークで表している. 
 
 * 各太陽定数に対する大気場(初期条件が 280 K 等温大気の場合)
 - 詳細(準備中)
-   -  [[./APESolarDepSWPO-T42_S1000_from_ini280K.html][S1000]], [[./APESolarDepSWPO-T42_S1100_from_ini280K.html][S1100]], [[./APESolarDepSWPO-T42_S1150_from_ini280K.html][S1150]], [[./APESolarDepSWPO-T42_S1200_from_ini280K.html][S1200]], [[./APESolarDepSWPO-T42_S1300_from_ini280K.html][S1300]], [[./APESolarDepSWPO-T42_S1380_from_ini280K.html][S1380]], [[./APESolarDepSWPO-T42_S1450_from_ini280K.html][S1450]], [[./APESolarDepSWPO-T42_S1500L32Mod_from_ini280K.html][S1500]]
+   -  [[./APESolarDepSWPO-T42_S1200_from_ini280K.html][S1200]],  [[./APESolarDepSWPO-T42_S1300_from_ini280K.html][S1300]], [[./APESolarDepSWPO-T42_S1380_from_ini280K.html][S1380]], [[./APESolarDepSWPO-T42_S1450_from_ini280K.html][S1450]]
 
 - 概要
-   - S=1100 W/m^2 (全球凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1100_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1100/mean_state/") :results value raw :exports results
-   - S=1200 W/m^2 (部分凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1200_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1200/mean_state/") :results value raw :exports results
-   - S=1300 W/m^2 (部分凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1300_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1300/mean_state/") :results value raw :exports results
-   - S=1380 W/m^2 (部分凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1380_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1380/mean_state/") :results value raw :exports results
-   - S=1450 W/m^2 (部分凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1450_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1450/mean_state/") :results value raw :exports results
+   - [[./APESolarDepSWPO-T42_S1200_from_ini280K.html][S=1200 W/m^2]] (全球凍結状態)
+     #+CALL: create_FigsTable("左から順に, 時間東西平均した東西風・温度場, 質量流線関数・比湿, 熱フラックス, 南北熱輸送", "S1200_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1200/mean_state/") :results value raw :exports results
+   - [[./APESolarDepSWPO-T42_S1300_from_ini280K.html][S=1300 W/m^2]] (部分凍結状態)
+     #+CALL: create_FigsTable("左から順に, 時間東西平均した東西風・温度場, 質量流線関数・比湿, 熱フラックス, 南北熱輸送", "S1300_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1300/mean_state/") :results value raw :exports results
+   - [[./APESolarDepSWPO-T42_S1380_from_ini280K.html][S=1380 W/m^2]] (部分凍結状態)
+     #+CALL: create_FigsTable("左から順に, 時間東西平均した東西風・温度場, 質量流線関数・比湿, 熱フラックス, 南北熱輸送", "S1380_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1380/mean_state/") :results value raw :exports results
+   - [[./APESolarDepSWPO-T42_S1450_from_ini280K.html][S=1450 W/m^2]] (部分凍結状態)
+     #+CALL: create_FigsTable("左から順に, 時間東西平均した東西風・温度場, 質量流線関数・比湿, 熱フラックス, 南北熱輸送", "S1450_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1450/mean_state/") :results value raw :exports results
    - S=1500 W/m^2 (部分凍結状態)
      #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1500L32Mod_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1500L32Mod/mean_state/") :results value raw :exports results
    - S=1600 W/m^2 (暴走温室状態)

@@ -1,0 +1,7 @@
+#+TITLE: Swamp ocean 実験(T42 計算)の結果 (S=1380 W/m^2, 初期条件: S=1380 W/m^2 ・280 K 等温大気が初期値の T21 計算の結果)
+#+AUTOHR: 河合 佑太
+#+LANGUAGE: ja
+#+HTML_MATHJAX: align:"left" mathml:t path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></SCRIPT>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./../org.css" />
+
+#+INCLUDE: "APESolarDepSWPO-T42_S1380_from_ini280K_sub.org"

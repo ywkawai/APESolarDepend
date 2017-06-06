@@ -1,0 +1,71 @@
+#+NAME: create_FigsTable
+#+BEGIN_SRC ruby ::results value raw :exports none :var caption="ほほげほげ" :var figPicsPath="hoge{1,2}.png" :var dirPath="./expdata_inhomoFluid/common/" :var figName="hoge"
+    require 'pathname'
+
+    str =  "#+CAPTION: #{caption}.\n" 
+    str << "#+NAME: fig:#{figName} \n" << "|"
+
+    figPicPathStrs = Dir.glob("#{dirPath}#{figPicsPath}")
+    
+
+    figPicPathStrs.each{|figPath|
+      figPath_ = figPath.gsub("_anim.mp4", "_snapshot.png")
+      figThumbPath = Pathname(figPath_).sub(/\.[^.]+$/,  "_thumb.png")
+      str << "[[file:#{figPath}][file:#{figThumbPath}]] |" 
+    }
+    str << "\n"
+    return str
+#+END_SRC
+
+
+[[../index.html][<水惑星の気候の太陽定数増減実験の Top  ページへ戻る>]]
+
+[[./APESolarDepDYNO.html][<dynamic ocean 実験の Top ページへ戻る>]]
+
+
+* 時系列
+
+- 全球平均値, 氷線緯度
+  - 大気
+    #+CALL: create_FigsTable("各エネルギーの全球平均値(左), 表面温度の全球平均値(中), 氷線緯度(右)の時系列", "#__SolarConstTag__#_{EngyGlMean,SfcTempGlMean,IcelineLat}_tserise.png", "./#__SolarConstTag__#/tserise/atm/") :results value raw :exports results
+    注) 全エネルギーの全球・時間平均値で各エネルギーは規格化した. さらに, 値の小さい運動エネルギー・潜熱エネルギーについては適宜スケールしてある(凡例参照).  
+
+  - 海洋
+    #+CALL: create_FigsTable("各エネルギーの全球平均値(左), 表面温度の全球平均値(中), 氷線緯度(右)の時系列", "#__SolarConstTag__#_{PTempSaltGlMean,SIceThickSIceEnGlMean,IcelineLat}_tserise.png", "./#__SolarConstTag__#/tserise/ocn/") :results value raw :exports results
+
+- 東西平均分布
+ - 大気
+    #+CALL: create_FigsTable("表面温度(左), 下層(sig=0.9)の温度(中), 上層(sig=0.3)の温度(右)の東西平均値の時系列", "#__SolarConstTag__#_{SfcTemp,TempSig0.9,TempSig0.3}XMean_tserise.png", "./#__SolarConstTag__#/tserise/atm/") :results value raw :exports results
+
+ - 海洋
+    #+CALL: create_FigsTable(" 上層(sig=-0.1)の温位(左), 中層(sig=-0.5)の温位, 下層(sig=-1)の温位の東西平均値の時系列", "#__SolarConstTag__#_{PTempSig0.1,PTempSig0.5,PTempSig1.0}XMean_tserise.png", "./#__SolarConstTag__#/tserise/ocn/") :results value raw :exports results
+
+
+* 統計的平衡状態
+
+- 子午面分布
+  - 大気
+    #+CALL: create_FigsTable("東西風・温度場, 質量流線関数・比湿", "#__SolarConstTag__#_{{U-T,MSF-QH2OVap}_xtmean_itr1,{U-T,MSF-QH2OVap}_xtmean_itr2}.png", "./#__SolarConstTag__#/mean_state/atm/") :results value raw :exports results
+    注) 縦軸は, 左半分の図についてはシグマ座標, 右半分の図については対数シグマ座標である. 
+
+  - 海洋
+    #+CALL: create_FigsTable("東西流・温位場, 質量流線関数・塩分", "#__SolarConstTag__#_{{U-PTemp,MSF-Salt}_xtmean_itr2,{U-PTemp,MSF-Salt}_xtmean_itr1}.png", "./#__SolarConstTag__#/mean_state/ocn/") :results value raw :exports results
+    注) 縦軸は, 左半分の図については海洋上層を強調した z 座標, 右半分の図については通常の z 座標である. 
+    #+CALL: create_FigsTable("ポテンシャル密度(偏差)・浮力振動数", "#__SolarConstTag__#_DensPot-BvFreq_xtmean_itr{2,1}.png", "./#__SolarConstTag__#/mean_state/ocn/") :results value raw :exports results
+    注) 縦軸は, 左半分の図については海洋上層を強調した z 座標, 右半分の図については通常の z 座標である. 
+
+- 惑星表面場
+  #+CALL: create_FigsTable("表面温度(左), 降水量(右)", "#__SolarConstTag__#_{SfcTemp,PRCP}_xtmean.png", "./#__SolarConstTag__#/mean_state/atm/") :results value raw :exports results
+
+- 惑星表面フラックス
+  #+CALL: create_FigsTable("エネルギーフラックス(降水, OLR, -OSR, SLR, 蒸発フラックス, 顕熱フラックス)(左), 風応力の東西成分(中)・南北成分(右)", "#__SolarConstTag__#_{EnergyFlux,TauX,TauY}_xtmean.png", "./#__SolarConstTag__#/mean_state/atm/") :results value raw :exports results
+
+  #+CALL: create_FigsTable("海洋-大気/海氷間の熱フラックス", "#__SolarConstTag__#_SfcHFlxO_xtmean.png", "./#__SolarConstTag__#/mean_state/ocn/") :results value raw :exports results
+
+
+- 南北熱輸送
+  #+CALL: create_FigsTable("大気の南北熱輸送(左), 海洋の南北熱輸送(右)", "{atm,ocn}/#__SolarConstTag__#_HeatFluxLat.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
+  
+- 場の時間発展の様子(動画)
+  #+CALL: create_FigsTable("降水分布(左)", "#__SolarConstTag__#_PRCP_anim.mp4", "./#__SolarConstTag__#/anim/atm/") :results value raw :exports results
+  

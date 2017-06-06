@@ -24,6 +24,7 @@
 
   - Dynamic ocean 実験 (現在地球と海洋塩分量が同程度の場合)
     - [[./couple/APESolarDepDYNO.html][AGCM-T21]]
+    - [[./couple_AlbMod/APESolarDepDYNOAlbMod.html][AGCM-T21 (表面アルベドの格子内分布を考慮)]]
     - [[./couple_T42/APESolarDepDYNO_T42.html][AGCM-T42]]
   - Dynamic ocean 実験 (現在地球より海洋塩分量がずっと小さい場合)
   - Dynamic ocean 実験 (現在地球より海洋塩分量がずっと大きい場合)

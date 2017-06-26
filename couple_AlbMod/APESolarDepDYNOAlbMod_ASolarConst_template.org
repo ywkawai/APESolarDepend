@@ -29,8 +29,8 @@
     #+CALL: create_FigsTable("各エネルギーの全球平均値(左), 表面温度の全球平均値(中), 氷線緯度(右)の時系列", "#__SolarConstTag__#_{EngyGlMean,SfcTempGlMean,IcelineLat}_tserise.png", "./#__SolarConstTag__#/tserise/atm/") :results value raw :exports results
     注) 全エネルギーの全球・時間平均値で各エネルギーは規格化した. さらに, 値の小さい運動エネルギー・潜熱エネルギーについては適宜スケールしてある(凡例参照).  
 
-  - 海洋
-    #+CALL: create_FigsTable("各エネルギーの全球平均値(左), 表面温度の全球平均値(中), 氷線緯度(右)の時系列", "#__SolarConstTag__#_{PTempSaltGlMean,SIceThickSIceEnGlMean,IcelineLat}_tserise.png", "./#__SolarConstTag__#/tserise/ocn/") :results value raw :exports results
+  - 海洋・海氷
+    #+CALL: create_FigsTable("各エネルギーの全球平均値(左), 表面温度の全球平均値(中), 氷線緯度(右)の時系列", "{ocn/#__SolarConstTag__#_PTempSaltGlMean,sice/#__SolarConstTag__#_SIceThickSIceEnGlMean,IcelineLat}_tserise.png", "./#__SolarConstTag__#/tserise/") :results value raw :exports results
 
 - 東西平均分布
  - 大気
@@ -38,6 +38,8 @@
 
  - 海洋
     #+CALL: create_FigsTable(" 上層(sig=-0.1)の温位(左), 中層(sig=-0.5)の温位, 下層(sig=-1)の温位の東西平均値の時系列", "#__SolarConstTag__#_{PTempSig0.1,PTempSig0.5,PTempSig1.0}XMean_tserise.png", "./#__SolarConstTag__#/tserise/ocn/") :results value raw :exports results
+
+ - 海氷
 
 
 * 統計的平衡状態

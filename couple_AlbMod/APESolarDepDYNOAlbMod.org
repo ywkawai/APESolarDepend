@@ -35,27 +35,49 @@
 | [[file:./regime_diagram/regime_diagram_gmtemp.png][file:./regime_diagram/regime_diagram_gmtemp.png]] |
 
 
-* 各太陽定数に対する大気場(初期条件が 280 K 等温大気の場合)
+* 大気海洋海氷場の太陽定数依存性
+
+- 大気
+  #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿場(右)", "{U-T,MSF-QH2OVap}_xtmean_itr1.png", "./solar_const_depend/atm/") :results value raw :exports results
+
+- 海洋
+  #+CALL: create_FigsTable("時間東西平均した東西流・温位場(左), 質量流線関数・塩分場(右)", "{U-PTemp,MSF-Salt}_xtmean_itr2.png", "./solar_const_depend/ocn/") :results value raw :exports results
+  注) 海洋上層 1 km を拡大表示している.  
+
+- 海氷
+  #+CALL: create_FigsTable("時間平均した海氷厚さ(左), ", "SIceThick.png", "./solar_const_depend/sice/") :results value raw :exports results
+
+- 惑星表面場, 惑星表面フラックス
+  #+CALL: create_FigsTable("表面温度(左), 降水量(中), 大気海氷-海洋間の熱フラックス(右)", "{atm/SfcTemp,atm/PRCP,ocn/SfcHFlxO}.png", "./solar_const_depend/") :results value raw :exports results
+  #+CALL: create_FigsTable("風応力東西成分(左), 風応力南北成分(右)", "{TauX,TauY}.png", "./solar_const_depend/atm/") :results value raw :exports results
+  
+- 南北熱輸送
+  #+CALL: create_FigsTable("大気海洋合計の南北熱輸送(左), 大気の南北熱輸送(中), 海洋の南北熱輸送(右)", "{couple,atm,ocn}/HeatFluxLat.png", "./solar_const_depend/") :results value raw :exports results
+
+
+* 各太陽定数に対する大気海洋海氷場(初期条件が 280 K 等温大気の場合)
 - 詳細(準備中)
-   -  [[./APESolarDepDYNOAlbMod_S1000_from_ini280K.html][S1000]], [[./APESolarDepDYNOAlbMod_S1100_from_ini280K.html][S1100]], [[./APESolarDepDYNOAlbMod_S1150_from_ini280K.html][S1150]], [[./APESolarDepDYNOAlbMod_S1200_from_ini280K.html][S1200]], [[./APESolarDepDYNOAlbMod_S1250_from_ini280K.html][S1250]],  [[./APESolarDepDYNOAlbMod_S1300_from_ini280K.html][S1300]], [[./APESolarDepDYNOAlbMod_S1380_from_ini280K.html][S1380]], [[./APESolarDepDYNOAlbMod_S1450_from_ini280K.html][S1450]], [[./APESolarDepDYNOAlbMod_S1500L32Mod_from_ini280K.html][S1500]]
+   -  [[./APESolarDepDYNOAlbMod_S1000_from_ini280K.html][S1000]], [[./APESolarDepDYNOAlbMod_S1100_from_ini280K.html][S1100]], [[./APESolarDepDYNOAlbMod_S1150_from_ini280K.html][S1150]], [[./APESolarDepDYNOAlbMod_S1200_from_ini280K.html][S1200]], [[./APESolarDepDYNOAlbMod_S1250_from_ini280K.html][S1250]],  [[./APESolarDepDYNOAlbMod_S1300_from_ini280K.html][S1300]], [[./APESolarDepDYNOAlbMod_S1380_from_ini280K.html][S1380]], [[./APESolarDepDYNOAlbMod_S1450_from_ini280K.html][S1450]], [[./APESolarDepDYNOAlbMod_S1500_from_ini280K.html][S1500]]
 
 - 概要
    - S=1100 W/m^2 (全球凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "atm/S1100_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1100/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿場(中), 熱フラックス(右)", "atm/S1100_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1100/mean_state/") :results value raw :exports results
    - S=1200 W/m^2 (部分凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "atm/S1200_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1200/mean_state/") :results value raw :exports results
-     #+CALL: create_FigsTable("海洋: 時間東西平均した東西流・温位場(左), 質量流線関数・塩分(中), 海洋南北熱輸送, 熱フラックス(右)", "ocn/S1200_{{U-PTemp,MSF-Salt}_xtmean_itr1,HeatFluxLat}.png", "./S1200/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿場(中), 熱フラックス(右)", "atm/S1200_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1200/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("海洋: 時間東西平均した東西流・温位場(左), 質量流線関数・塩分場(中), 海洋南北熱輸送, 熱フラックス(右)", "ocn/S1200_{{U-PTemp,MSF-Salt}_xtmean_itr1,HeatFluxLat}.png", "./S1200/mean_state/") :results value raw :exports results
    - S=1300 W/m^2 (部分凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "atm/S1300_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1300/mean_state/") :results value raw :exports results
-     #+CALL: create_FigsTable("海洋: 時間東西平均した東西流・温位場(左), 質量流線関数・塩分(中), 海洋南北熱輸送, 熱フラックス(右)", "ocn/S1300_{{U-PTemp,MSF-Salt}_xtmean_itr1,HeatFluxLat}.png", "./S1300/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿場(中), 熱フラックス(右)", "atm/S1300_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1300/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("海洋: 時間東西平均した東西流・温位場(左), 質量流線関数・塩分場(中), 海洋南北熱輸送, 熱フラックス(右)", "ocn/S1300_{{U-PTemp,MSF-Salt}_xtmean_itr1,HeatFluxLat}.png", "./S1300/mean_state/") :results value raw :exports results
    - S=1380 W/m^2 (部分凍結状態)
-     #+CALL: create_FigsTable("大気: 時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 大気南北熱輸送, 熱フラックス(右)", "atm/S1380_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1380/mean_state/") :results value raw :exports results
-     #+CALL: create_FigsTable("海洋: 時間東西平均した東西流・温位場(左), 質量流線関数・塩分(中), 海洋南北熱輸送, 熱フラックス(右)", "ocn/S1380_{{U-PTemp,MSF-Salt}_xtmean_itr1,HeatFluxLat}.png", "./S1380/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("大気: 時間東西平均した東西風・温度場(左), 質量流線関数・比湿場(中), 大気南北熱輸送, 熱フラックス(右)", "atm/S1380_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1380/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("海洋: 時間東西平均した東西流・温位場(左), 質量流線関数・塩分場(中), 海洋南北熱輸送, 熱フラックス(右)", "ocn/S1380_{{U-PTemp,MSF-Salt}_xtmean_itr1,HeatFluxLat}.png", "./S1380/mean_state/") :results value raw :exports results
    - S=1450 W/m^2 (部分凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "atm/S1450_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1450/mean_state/") :results value raw :exports results
-     #+CALL: create_FigsTable("海洋: 時間東西平均した東西流・温位場(左), 質量流線関数・塩分(中), 海洋南北熱輸送, 熱フラックス(右)", "ocn/S1450_{{U-PTemp,MSF-Salt}_xtmean_itr1,HeatFluxLat}.png", "./S1450/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿場(中), 熱フラックス(右)", "atm/S1450_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1450/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("海洋: 時間東西平均した東西流・温位場(左), 質量流線関数・塩分場(中), 海洋南北熱輸送, 熱フラックス(右)", "ocn/S1450_{{U-PTemp,MSF-Salt}_xtmean_itr1,HeatFluxLat}.png", "./S1450/mean_state/") :results value raw :exports results
    - S=1500 W/m^2 (部分凍結状態)
-     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿(中), 熱フラックス(右)", "S1500L32Mod_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean}.png", "./S1500L32Mod/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿場(中), 熱フラックス(右)", "atm/S1500_{{U-T,MSF-QH2OVap}_xtmean_itr1,EnergyFlux_xtmean,HeatFluxLat}.png", "./S1500/mean_state/") :results value raw :exports results
+     #+CALL: create_FigsTable("海洋: 時間東西平均した東西流・温位場(左), 質量流線関数・塩分場(中), 海洋南北熱輸送, 熱フラックス(右)", "ocn/S1500_{{U-PTemp,MSF-Salt}_xtmean_itr1,HeatFluxLat}.png", "./S1500/mean_state/") :results value raw :exports results
    - S=1600 W/m^2 (暴走温室状態)
      - 準備中
+
 

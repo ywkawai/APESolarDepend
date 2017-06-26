@@ -8,7 +8,7 @@
 
 
 * モデルの記述
-  - [[../Dthesis/dthesis_ja_main.pdf][D 論]] の第??章と付録を参照(リンク)
+  - [[../Dthesis/dthesis_ja_main.pdf][D 論]] の第2章および付録を参照
 
 * 実験ケース
  - hogehoge
@@ -41,7 +41,7 @@
 
 * 関連リンク
   - 参考文献リスト
-  - [[./misc/experiment_progress.html][水惑星の気候の太陽定数増減実験の計算進捗リスト]]
+#  - [[./misc/experiment_progress.html][水惑星の気候の太陽定数増減実験の計算進捗リスト]]
   - dcmodel 群
     - [[https://www.gfd-dennou.org/arch/dcpam/][惑星大気大循環モデル: DCPAM]]
     - [[https://github.com/gfd-dennou-club/Dennou-OGCM][海洋大循環モデル・海氷熱力学モデル: Dennou-OGCM]]

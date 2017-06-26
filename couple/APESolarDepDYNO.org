@@ -35,7 +35,7 @@
 | [[file:./regime_diagram/regime_diagram_gmtemp.png][file:./regime_diagram/regime_diagram_gmtemp.png]] |
 
 
-* 各太陽定数に対する大気場(初期条件が 280 K 等温大気の場合)
+* 各太陽定数に対する大気海洋海氷場(初期条件が 280 K 等温大気の場合)
 - 詳細(準備中)
    -  [[./APESolarDepDYNO_S1000_from_ini280K.html][S1000]], [[./APESolarDepDYNO_S1100_from_ini280K.html][S1100]], [[./APESolarDepDYNO_S1150_from_ini280K.html][S1150]], [[./APESolarDepDYNO_S1200_from_ini280K.html][S1200]], [[./APESolarDepDYNO_S1250_from_ini280K.html][S1250]],  [[./APESolarDepDYNO_S1300_from_ini280K.html][S1300]], [[./APESolarDepDYNO_S1380_from_ini280K.html][S1380]], [[./APESolarDepDYNO_S1450_from_ini280K.html][S1450]], [[./APESolarDepDYNO_S1500L32Mod_from_ini280K.html][S1500]]
 

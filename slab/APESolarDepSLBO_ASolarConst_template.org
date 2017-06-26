@@ -18,18 +18,40 @@
 
 [[../index.html][<水惑星の気候の太陽定数増減実験の Top  ページへ戻る>]]
 
-[[./APESolarDepSLBO.html][<swamp ocean 実験の Top ページへ戻る>]]
+[[./APESolarDepSLBO.html][<slab ocean 実験の Top ページへ戻る>]]
 
+
+* 時系列
+
+- 全球平均値, 氷線緯度
+  #+CALL: create_FigsTable("各エネルギーの全球平均値(左), 表面温度の全球平均値(中), 氷線緯度(右)の時系列", "#__SolarConstTag__#_{EngyGlMean,SfcTempGlMean,IcelineLat}_tserise.png", "./#__SolarConstTag__#/tserise/") :results value raw :exports results
+  注) 全エネルギーの全球・時間平均値で各エネルギーは規格化した. さらに, 値の小さい運動エネルギー・潜熱エネルギーについては適宜スケールしてある(凡例参照).  
+
+- 東西平均分布
+  #+CALL: create_FigsTable("表面温度(左), 大気下層(sig=0.9)の温度(中), 大気上層(sig=0.3)の温度(右)の東西平均値の時系列", "#__SolarConstTag__#_{SfcTemp,TempSig0.9,TempSig0.3}XMean_tserise.png", "./#__SolarConstTag__#/tserise/") :results value raw :exports results
 
 * 統計的平衡状態
 
-- 時間平均・東西平均場
+- 子午面分布
   #+CALL: create_FigsTable("東西風・温度場(左), 質量流線関数・比湿(右)", "#__SolarConstTag__#_{U-T,MSF-QH2OVap}_xtmean_itr1.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
   
-- 時間平均・東西平均場(鉛直 log 座標)
+- 子午面分布(鉛直 log 座標)
 
   #+CALL: create_FigsTable("東西風・温度場(左), 質量流線関数・比湿(右)", "#__SolarConstTag__#_{U-T,MSF-QH2OVap}_xtmean_itr2.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
 
-- 熱フラックス
+- 大気上端・下端のフラックス
 
-  #+CALL: create_FigsTable("熱フラックス", "#__SolarConstTag__#_EnergyFlux_xtmean.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
+  #+CALL: create_FigsTable("熱フラックス(降水, OLR, -OSR, SLR, 蒸発フラックス, 顕熱フラックス)(左), 風応力の東西成分(中)・南北成分(右)", "#__SolarConstTag__#_{EnergyFlux,TauX,TauY}_xtmean.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
+
+- 惑星表面場
+
+  #+CALL: create_FigsTable("表面温度(左), 降水量(右)", "#__SolarConstTag__#_{SfcTemp,PRCP}_xtmean.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
+
+- 南北フラックス
+
+  #+CALL: create_FigsTable("南北熱フラックス", "#__SolarConstTag__#_HeatFluxLat.png", "./#__SolarConstTag__#/mean_state/") :results value raw :exports results
+
+- 場の時間発展の様子(動画)
+
+  #+CALL: create_FigsTable("降水分布(左)", "#__SolarConstTag__#_PRCP_anim.mp4", "./#__SolarConstTag__#/anim/") :results value raw :exports results
+  

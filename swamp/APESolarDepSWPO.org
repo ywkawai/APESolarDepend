@@ -34,6 +34,15 @@
 - 太陽定数に対する全球平均温度依存性
 | [[file:./regime_diagram/regime_diagram_gmtemp.png][file:./regime_diagram/regime_diagram_gmtemp.png]] |
 
+* 大気場の太陽定数依存性
+
+- 大気
+  #+CALL: create_FigsTable("時間東西平均した東西風・温度場(左), 質量流線関数・比湿場(右)", "{U-T,MSF-QH2OVap}_xtmean_itr1.png", "./solar_const_depend/") :results value raw :exports results
+
+- 惑星表面場, 惑星表面フラックス
+  #+CALL: create_FigsTable("表面温度(左), 降水量(右)", "{SfcTemp,PRCP}.png", "./solar_const_depend/") :results value raw :exports results
+  #+CALL: create_FigsTable("風応力東西成分(左), 風応力南北成分(右)", "{TauX,TauY}.png", "./solar_const_depend/") :results value raw :exports results
+
 
 * 各太陽定数に対する大気場(初期条件: 280 K 等温大気)
 - 詳細
